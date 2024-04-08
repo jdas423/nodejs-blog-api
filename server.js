@@ -12,7 +12,7 @@ const appErr=require("./utilis/appErr")
 
 app.use(express.json());
 
-app.use("/",async(req,res,next)=>{
+app.get("/",async(req,res,next)=>{
    try{
      const user=await User.find();
      return res.json(
